@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useMemo, useState } from "react"
 import updates from "@/data/updates.json"
 
@@ -24,7 +25,7 @@ function UpdateCard({ item, ongoing = false }: { item: Update; ongoing?: boolean
     <div className={`upd-date${ongoing ? " upd-date-ongoing" : ""}`} aria-hidden="true">{ongoing ? <span className="upd-mon">Now</span> : <><span className="upd-mon">{months[date.getMonth()].slice(0, 3)}</span><span className="upd-day">{date.getDate()}</span></>}</div>
     <div className="upd-body"><span className={`upd-tag upd-${item.category}`}>{labels[item.category] || item.category}</span><h3>{item.title}</h3>
       {meta.length > 0 && <div className="upd-meta">{meta.map((entry, i) => <span key={i}>{i > 0 && <span> · </span>}{entry}</span>)}</div>}
-      {item.body && <p>{item.body}</p>}{item.link && <a className="upd-link cursor-pointer" href={item.link} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{item.linkLabel || "Learn more"} →</a>}
+      {item.body && <p>{item.body}</p>}{item.link && (external ? <a className="upd-link cursor-pointer" href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Learn more"} →</a> : <Link className="upd-link cursor-pointer" href={item.link}>{item.linkLabel || "Learn more"} →</Link>)}
     </div>
   </article>
 }
@@ -55,7 +56,7 @@ export function UpdatesList() {
   return <>
     <div className="upd-toolbar"><div className="upd-filters" role="group" aria-label="Filter updates by type">{filters.map(([value, label]) => <button type="button" key={value} aria-pressed={filter === value} className={`filter-btn cursor-pointer${filter === value ? " active" : ""}`} onClick={() => setFilter(value)}>{label}</button>)}</div><div className="upd-count" aria-live="polite">{dated.length} entries · {ongoing.length} ongoing</div></div>
     <div className="upd-results">
-      <section className="upd-section"><h2 className="upd-h2">Upcoming</h2>{upcoming.filter(visible).length ? <div className="upd-list">{upcoming.filter(visible).map((item, i) => <UpdateCard key={`${item.date}-${i}`} item={item} />)}</div> : <p className="upd-empty">{filter === "all" ? <>Nothing on the calendar right now. <a href="get-involved.html#join">Join the network</a> to hear about the next one first.</> : "No upcoming updates in this category."}</p>}</section>
+      <section className="upd-section"><h2 className="upd-h2">Upcoming</h2>{upcoming.filter(visible).length ? <div className="upd-list">{upcoming.filter(visible).map((item, i) => <UpdateCard key={`${item.date}-${i}`} item={item} />)}</div> : <p className="upd-empty">{filter === "all" ? <>Nothing on the calendar right now. <Link href="/get-involved/#join">Join the network</Link> to hear about the next one first.</> : "No upcoming updates in this category."}</p>}</section>
       {ongoing.some(visible) && <section className="upd-section"><h2 className="upd-h2">Ongoing campaigns &amp; programmes</h2><div className="upd-list">{ongoing.filter(visible).map((item, i) => <UpdateCard key={`${item.title}-${i}`} item={item} ongoing />)}</div></section>}
       {groupedPast.some((group) => group.items.some(visible)) && <section className="upd-section"><h2 className="upd-h2">Archive</h2>{groupedPast.map((group) => {
         const items = group.items.filter(visible)

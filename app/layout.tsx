@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { DM_Sans, Noto_Sans_Arabic, Playfair_Display, Source_Serif_4 } from "next/font/google"
 import "./globals.css"
+import "./styles/shared.css"
 
 const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"], weight: ["300", "400", "500", "600"] })
 const playfair = Playfair_Display({ variable: "--font-playfair-display", subsets: ["latin"], weight: ["400", "600", "700"], style: ["normal", "italic"] })
@@ -16,5 +17,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#28390d" }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${sourceSerif.variable} ${notoArabic.variable}`}><head><link rel="stylesheet" href="/legacy/css/shared.css" /></head><body>{children}</body></html>
+  return <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${sourceSerif.variable} ${notoArabic.variable}`}><body>{children}</body></html>
 }
