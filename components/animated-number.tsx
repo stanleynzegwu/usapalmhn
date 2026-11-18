@@ -28,3 +28,13 @@ export function AnimatedNumber({ target, suffix = "" }: { target: number; suffix
 
   return <div ref={setElement} className="impact-number">{value}{suffix}</div>
 }
+
+export function YearsActive() {
+  const [target, setTarget] = useState(0)
+
+  useEffect(() => {
+    setTarget(Math.max(0, new Date().getFullYear() - 2016))
+  }, [])
+
+  return <AnimatedNumber target={target} />
+}

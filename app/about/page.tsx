@@ -64,7 +64,7 @@ export default function Page() {
           <div className={"about-section-header"}>
             <div>
               <h2>Our Aims</h2>
-              <p>The five pillars of our work as a network.</p>
+              <p>Five aims guide our work as a network.</p>
             </div>
           </div>
           <ul className={"aims-list"}>

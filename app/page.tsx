@@ -1,6 +1,6 @@
 import { SitePage } from "@/components/site-page";
 import { HeroCarousel } from "@/components/hero-carousel";
-import { AnimatedNumber } from "@/components/animated-number";
+import { AnimatedNumber, YearsActive } from "@/components/animated-number";
 import Link from "next/link";
 import type { Metadata } from "next";
 import "./styles/pages/index.css";
@@ -103,7 +103,7 @@ export default function Page() {
             <div className={"impact-line il-green"}></div>
           </div>
           <div className={"impact-item"}>
-            <AnimatedNumber target={8} suffix={""} />
+            <YearsActive />
             <div className={"impact-label"}>Years Active</div>
             <div className={"impact-line il-red"}></div>
           </div>
@@ -123,7 +123,7 @@ export default function Page() {
         <div className={"section-header-left"}>
           <div className={"section-label"}>Our Pillars</div>
           <h2 className={"section-title"}>
-            Three Commitments That Define Our Work
+            Two Commitments That Define Our Work
           </h2>
           <p className={"section-sub"}>
             Founded by clinicians — bringing rigor, ethics, and solidarity to
@@ -145,14 +145,6 @@ export default function Page() {
               We develop curriculum on settler-colonial trauma, forced
               displacement, and intergenerational grief for graduate programs,
               CEUs, and clinical supervision.
-            </p>
-          </div>
-          <div className={"mission-card mc-blue"}>
-            <h3>Professional Community</h3>
-            <p>
-              A national peer network for clinicians navigating the personal and
-              professional weight of this work — peer consultation, mentorship,
-              and mutual support.
             </p>
           </div>
         </div>

@@ -18,7 +18,7 @@ export function HeroCarousel({ slides, stats, slidesStyle, ...sectionProps }: He
     if (slideElements.length < 2) return
     const timer = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % slideElements.length)
-    }, 5000)
+    }, 8000)
     return () => window.clearInterval(timer)
   }, [activeSlide, slideElements.length])
 
