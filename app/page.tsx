@@ -1,4 +1,3 @@
-import { SitePage } from "@/components/site-page";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { AnimatedNumber, YearsActive } from "@/components/animated-number";
 import Link from "next/link";
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <SitePage page="/">
+    <>
       <HeroCarousel
         id={"hero"}
         slidesStyle={{ minHeight: "75vh" }}
@@ -425,6 +424,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </SitePage>
+    </>
   );
 }

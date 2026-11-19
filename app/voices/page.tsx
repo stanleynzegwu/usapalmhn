@@ -1,4 +1,3 @@
-import { SitePage } from "@/components/site-page";
 import {
   ScrollSpyLink,
   ScrollSpyProvider,
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <SitePage page="/voices/">
+    <>
       <ScrollSpyProvider>
         <div className={"page-hero"}>
           <div className={"keffiyeh-overlay"}></div>
@@ -820,6 +819,6 @@ export default function Page() {
           </main>
         </div>
       </ScrollSpyProvider>
-    </SitePage>
+    </>
   );
 }

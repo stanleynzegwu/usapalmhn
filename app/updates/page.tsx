@@ -1,4 +1,3 @@
-import { SitePage } from "@/components/site-page";
 import { UpdatesList } from "@/components/updates-list";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <SitePage page="/updates/">
+    <>
       <div className={"page-hero"}>
         <div className={"keffiyeh-overlay"}></div>
         <div className={"page-hero-content"}>
@@ -44,6 +43,6 @@ export default function Page() {
           </p>
         </noscript>
       </div>
-    </SitePage>
+    </>
   );
 }

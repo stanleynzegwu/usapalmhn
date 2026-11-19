@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Script from "next/script"
+import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
 declare global {
@@ -44,7 +45,14 @@ function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
   </>
 }
 
-export function SiteNav({ page }: { page: string }) {
+function isActivePath(pathname: string, href: string) {
+  const path = pathname.replace(/\/+$/, "") || "/"
+  const target = href.replace(/\/+$/, "") || "/"
+  return path === target || path.startsWith(`${target}/`)
+}
+
+export function SiteNav() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   return <header className="nav-wrapper">
     <nav className="nav-top" aria-label="Main header">
@@ -56,7 +64,7 @@ export function SiteNav({ page }: { page: string }) {
         <button className="hamburger cursor-pointer" type="button" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen((value) => !value)}><span /><span /><span /></button>
       </div>
     </nav>
-    <nav className="nav-bottom" aria-label="Primary navigation"><ul className="nav-links">{links.map((item) => <li key={item.href} className={item.children ? "has-sub" : ""}><Link href={item.href} className={page === item.href || item.children?.some((child) => child.href === page) ? "active" : ""}>{item.label}{item.children && <span className="sub-caret" aria-hidden="true">▾</span>}</Link>{item.children && <ul className="nav-submenu">{item.children.map((child) => <li key={child.href}><Link href={child.href} className={page === child.href && child.href !== item.href ? "active" : ""}>{child.label}</Link></li>)}</ul>}</li>)}</ul></nav>
+    <nav className="nav-bottom" aria-label="Primary navigation"><ul className="nav-links">{links.map((item) => <li key={item.href} className={item.children ? "has-sub" : ""}><Link href={item.href} className={isActivePath(pathname, item.href) || item.children?.some((child) => isActivePath(pathname, child.href)) ? "active" : ""}>{item.label}{item.children && <span className="sub-caret" aria-hidden="true">▾</span>}</Link>{item.children && <ul className="nav-submenu">{item.children.map((child) => <li key={child.href}><Link href={child.href} className={isActivePath(pathname, child.href) && child.href !== item.href ? "active" : ""}>{child.label}</Link></li>)}</ul>}</li>)}</ul></nav>
     <nav id="mobileMenu" className={`mobile-menu${open ? " open" : ""}`} aria-label="Mobile navigation">{links.flatMap((item) => [{ href: item.href, label: item.mobileLabel || item.label, sub: false }, ...(item.children || []).map((child) => ({ ...child, sub: true }))]).map((item) => <Link key={`${item.href}-${item.label}`} href={item.href} className={item.sub ? "mobile-sub" : ""} onClick={() => setOpen(false)}>{item.label}</Link>)}<LanguageToggle mobile /></nav>
   </header>
 }

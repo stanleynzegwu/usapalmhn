@@ -1,4 +1,3 @@
-import { SitePage } from "@/components/site-page";
 import Link from "next/link";
 import type { Metadata } from "next";
 import "../styles/pages/statement.css";
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <SitePage page="/statement-on-anti-semitism/">
+    <>
       <div className={"page-hero"}>
         <div className={"keffiyeh-overlay"}></div>
         <div className={"page-hero-content"}>
@@ -192,6 +191,6 @@ export default function Page() {
           </div>
         </article>
       </div>
-    </SitePage>
+    </>
   );
 }
