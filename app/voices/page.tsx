@@ -113,7 +113,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/about-voices-on-mental-health/"
+                      "/voices/about-voices-on-mental-health"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -148,7 +148,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/even-the-longest-winters-end-december-2024/"
+                        "/voices/even-the-longest-winters-end-december-2024"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -176,7 +176,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/there-is-always-hope/"
+                        "/voices/there-is-always-hope"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -206,7 +206,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/reflections-from-a-journalist-in-gaza-january-2024/"
+                        "/voices/reflections-from-a-journalist-in-gaza-january-2024"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -234,7 +234,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/in-memoriam-yousef-mahar-dawas/"
+                        "/voices/in-memoriam-yousef-mahar-dawas"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -262,7 +262,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/a-voice-from-a-young-journalist-in-gaza-october-26-2023/"
+                        "/voices/a-voice-from-a-young-journalist-in-gaza-october-26-2023"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -291,7 +291,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/close-calls-with-death/"
+                        "/voices/close-calls-with-death"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -322,7 +322,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/a-romance-a-birthplace-destroyed-memories-of-gazas-bombed-ahli-hospital-israel-palestine-conflict/"
+                        "/voices/a-romance-a-birthplace-destroyed-memories-of-gazas-bombed-ahli-hospital-israel-palestine-conflict"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -353,7 +353,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/under-siege-childrens-mental-health-in-gaza/"
+                        "/voices/under-siege-childrens-mental-health-in-gaza"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -381,7 +381,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/a-letter-from-gaza-june-2018-by-hanan-bashir/"
+                        "/voices/a-letter-from-gaza-june-2018-by-hanan-bashir"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -399,7 +399,7 @@ export default function Page() {
               </div>
               <div style={{ marginTop: "28px" }}>
                 <a
-                  href={"https://usapalmhn.org/voices-on-gaza/"}
+                  href={"/voices/gaza"}
                   target={"_blank"}
                   className={"btn-olive cursor-pointer"}
                 >
@@ -435,7 +435,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/all-thats-left-of-you-not-just-a-film-but-an-experience-worth-watching/"
+                        "/voices/all-thats-left-of-you-not-just-a-film-but-an-experience-worth-watching"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -457,7 +457,7 @@ export default function Page() {
                       against them."
                     </p>
                     <a
-                      href={"https://usapalmhn.org/portfolio-item/nakba-2023/"}
+                      href={"/voices/nakba-2023"}
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
                     >
@@ -479,7 +479,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/update-from-palestine-october-16-2023/"
+                        "/voices/update-from-palestine-october-16-2023"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -505,7 +505,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/resistance-as-a-path-to-healing-the-quest-for-mental-health-in-palestine/"
+                        "/voices/resistance-as-a-path-to-healing-the-quest-for-mental-health-in-palestine"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -527,7 +527,7 @@ export default function Page() {
                     </p>
                     <a
                       href={
-                        "https://usapalmhn.org/portfolio-item/once-upon-a-time-in-palestine/"
+                        "/voices/once-upon-a-time-in-palestine"
                       }
                       target={"_blank"}
                       className={"link-arrow cursor-pointer"}
@@ -546,7 +546,7 @@ export default function Page() {
               </div>
               <div style={{ marginTop: "28px" }}>
                 <a
-                  href={"https://usapalmhn.org/voices-from-the-west-bank/"}
+                  href={"/voices/west-bank"}
                   target={"_blank"}
                   className={"btn-olive cursor-pointer"}
                 >
@@ -576,7 +576,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/voices-from-the-diaspora/"
+                      "/voices/voices-from-the-diaspora"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -607,7 +607,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/may-2021-assault-on-palestine/"
+                      "/voices/may-2021"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -639,7 +639,7 @@ export default function Page() {
                 </p>
                 <a
                   href={
-                    "https://usapalmhn.org/portfolio-item/psychoanalytic-activist/"
+                    "/voices/psychoanalytic-activist"
                   }
                   target={"_blank"}
                   className={"btn-white cursor-pointer"}
@@ -671,7 +671,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/we-are-not-numbers/"
+                      "/voices/we-are-not-numbers"
                     }
                     target={"_blank"}
                     className={"btn-olive-sm cursor-pointer"}
@@ -711,7 +711,7 @@ export default function Page() {
                 >
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/mental-health-workers-pledge-for-palestine/"
+                      "/voices/mental-health-workers-pledge-for-palestine"
                     }
                     target={"_blank"}
                     className={"btn-white cursor-pointer"}
@@ -742,7 +742,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/statement-on-israeli-annexation/"
+                      "/voices/statement-on-israeli-annexation"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -766,7 +766,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/statement-on-israeli-raid-of-dci/"
+                      "/voices/statement-on-israeli-raid-of-dci"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -788,7 +788,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "https://usapalmhn.org/portfolio-item/statement-condemning-the-invasion-of-birzeit/"
+                      "/voices/statement-condemning-the-invasion-of-birzeit"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
@@ -808,7 +808,7 @@ export default function Page() {
                     and ethnic hatred.
                   </p>
                   <Link
-                    href={"/statement-on-anti-semitism/"}
+                    href={"/statement-on-anti-semitism"}
                     className={"cursor-pointer"}
                   >
                     Read Statement →
