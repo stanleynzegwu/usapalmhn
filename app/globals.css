@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root { color-scheme: light; font-family: var(--font-dm-sans), sans-serif; }
+body { font-family: var(--font-dm-sans), sans-serif; }
+a, button, input[type="submit"], [role="button"] { cursor: pointer; }
+#google_translate_element { display: none; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #1A3A6B; outline-offset: 3px; }
+:lang(ar) { font-family: var(--font-noto-sans-arabic), sans-serif !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
