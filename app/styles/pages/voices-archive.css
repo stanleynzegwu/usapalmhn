@@ -198,6 +198,24 @@
   margin-top: 0.5rem;
 }
 
+.voice-archive-count,
+.voice-archive-context {
+  color: var(--text-muted);
+  font-size: 0.87rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.voice-archive-context a {
+  color: var(--olive-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.voice-archive-context a:hover {
+  color: var(--olive);
+}
+
 .voice-archive-eyebrow {
   color: var(--text-muted);
   font-size: 0.72rem;

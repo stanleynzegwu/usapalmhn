@@ -10,7 +10,16 @@ export function CategoryArchive({
 }) {
   const visibleItems = archive.items.filter((item) => item.page === page);
   const lastPage = Math.max(...archive.items.map((item) => item.page));
+  const itemsBeforePage = archive.items.filter((item) => item.page < page).length;
+  const firstVisibleItem = itemsBeforePage + 1;
+  const lastVisibleItem = itemsBeforePage + visibleItems.length;
   const basePath = `/voices/categories/${archive.slug}`;
+  const introductionPath =
+    archive.slug === "gaza"
+      ? "/voices/gaza"
+      : archive.slug === "west-bank"
+        ? "/voices/west-bank"
+        : "/voices/may-2021";
 
   return (
     <>
@@ -26,8 +35,12 @@ export function CategoryArchive({
         <header className="voice-archive-header">
           <p className="voice-archive-eyebrow">Voices archive</p>
           <h1>{archive.title}</h1>
-          <p>
-            {archive.items.length} {archive.items.length === 1 ? "entry" : "entries"}
+          <p className="voice-archive-count">
+            Showing {firstVisibleItem}–{lastVisibleItem} of {archive.items.length} entries
+          </p>
+          <p className="voice-archive-context">
+            This complete archive is listed in its original order. The separate{" "}
+            <Link href={introductionPath}>introductory page</Link> remains a curated overview.
           </p>
         </header>
 

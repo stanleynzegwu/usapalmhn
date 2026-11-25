@@ -399,7 +399,7 @@ export default function Page() {
               </div>
               <div style={{ marginTop: "28px" }}>
                 <a
-                  href={"/voices/gaza"}
+                  href={"/voices/categories/gaza"}
                   target={"_blank"}
                   className={"btn-olive cursor-pointer"}
                 >
@@ -546,7 +546,7 @@ export default function Page() {
               </div>
               <div style={{ marginTop: "28px" }}>
                 <a
-                  href={"/voices/west-bank"}
+                  href={"/voices/categories/west-bank"}
                   target={"_blank"}
                   className={"btn-olive cursor-pointer"}
                 >
@@ -607,7 +607,7 @@ export default function Page() {
                   </p>
                   <a
                     href={
-                      "/voices/may-2021"
+                      "/voices/categories/may-2021"
                     }
                     target={"_blank"}
                     className={"cursor-pointer"}
